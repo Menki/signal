@@ -116,7 +116,7 @@ describe Project do
 
   it "should return when was the last build" do
     date = Time.now
-    Project.new(:builds => [Build.new :created_at => date]).last_builded_at.should eql(date)
+    Project.new(:builds => [Build.new(:created_at => date)]).last_builded_at.should eql(date)
   end
 
   context "on update" do
